@@ -1,7 +1,5 @@
 # STM32 Blue Pill (clone) Beginner Guide
-
 ![](https://raw.githubusercontent.com/hasaranga/STM32-Blue-Pill-Guide/main/bluepill.jpg)
-
 ## Using STM32CubeIDE
 Download and install **STM32CubeIDE** and **ST-LINK Utility**. Start **STM32CubeIDE** and create a new STM32 project. It will show **Targer Selection** window. Select **STM32F103C8** as **Part No**. Press **Next** button. Enter the project name and browse a folder to save the project. Set **Target Language** as C. Set **Target Binary Type** to Executable. Set **Target Project Type** to STM32Cube. Click **Nex**t and then press **Finish**. 
 
