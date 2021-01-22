@@ -2,7 +2,7 @@
 
 ![](https://raw.githubusercontent.com/hasaranga/STM32-Blue-Pill-Guide/main/bluepill.jpg)
 
-##### Using STM32CubeIDE
+## Using STM32CubeIDE
 Download and install **STM32CubeIDE** and **ST-LINK Utility**. Start **STM32CubeIDE** and create a new STM32 project. It will show **Targer Selection** window. Select **STM32F103C8** as **Part No**. Press **Next** button. Enter the project name and browse a folder to save the project. Set **Target Language** as C. Set **Target Binary Type** to Executable. Set **Target Project Type** to STM32Cube. Click **Nex**t and then press **Finish**. 
 
 Double click on your **project.ioc** file. Go to **Pinout & Configuration** tab and then click on **System Core**. Click on **RCC** and then set **High Speed Clock(HSE)** to **Crystal/Ceramic Resonator**. Click on **SYS** and then set **Debug** to **Serial Wire**. 
@@ -24,7 +24,7 @@ To blink the default LED, put following code within the while loop.
 
 Go to **Project** menu and then press **Build All**.  It will create your **project.bin** file in **Debug** folder. We will use this file to flash our board using ST Link utility.
 
-##### Flashing STM32 Blue Pill
+## Flashing STM32 Blue Pill
 
 Connect **ST-Link v2** (clone) into the **Blue Pill** according to the pinout as specified on the dongle. Some dongles may have incorrect pin out specifications. Remove the metal cover and compare it with the labels on PCB. (Pushing the usb port by finger will remove the cover.) Jumpers on Blue Pill should be set to zero side.
 
@@ -40,7 +40,7 @@ Check the **Reset after programming** check box. And then press the **Start** bu
 
 When the flashing finishes the LED should be blink according to our program! When you update the bin file, you should close the already opened file in **ST-LINK Utility**. otherwise it will use the old file from memory.
 
-##### Debugging Support
+## Debugging Support
 
 We need to use OpenOCD as our debugger (GDB will not work).
 Find the config file : **stm32f1x.cfg**
