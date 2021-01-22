@@ -48,6 +48,7 @@ Find the config file : **stm32f1x.cfg**
 **C:\ST\STM32CubeIDE_1.5.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.debug.openocd_1.5.0.202011091203\resources\openocd\st_scripts\target**
 
 Add the following near the top of **stm32f1x.cfg** (before the first If – statement):
+
 **set CPUTAPID 0**
 
 The zero tells OpenOCD to ignore id numbers, which means all clones or genuine MCUs will work.
