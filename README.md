@@ -1,5 +1,25 @@
 # STM32 Blue Pill (clone) Beginner Guide
 ![](https://raw.githubusercontent.com/hasaranga/STM32-Blue-Pill-Guide/main/bluepill.jpg)
+
+## Using PlatformIO
+Add the following to **platformio.ini** file for uploading & debugging chinese clones(CKS32F103). Make sure to update the path to match your OS user name.
+```
+upload_protocol = stlink
+debug_tool = stlink
+
+; --- Fix for CKS32F103 (clone) ID mismatch ---
+upload_flags = -c set CPUTAPID 0
+
+debug_server =
+  C:/Users/XXXX/.platformio/packages/tool-openocd/bin/openocd
+  -s C:/Users/XXXX/.platformio/packages/tool-openocd/scripts
+  -f interface/stlink.cfg
+  -c "transport select hla_swd"
+  -c "set CPUTAPID 0"
+  -f target/stm32f1x.cfg
+  -c "reset_config none" 
+```
+
 ## Using STM32CubeIDE
 Download and install **STM32CubeIDE** and **ST-LINK Utility**. Start **STM32CubeIDE** and create a new STM32 project. It will show **Targer Selection** window. Select **STM32F103C8** as **Part No**. Press **Next** button. Enter the project name and browse a folder to save the project. Set **Target Language** as C. Set **Target Binary Type** to Executable. Set **Target Project Type** to STM32Cube. Click **Nex**t and then press **Finish**. 
 
